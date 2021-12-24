@@ -1,2 +1,2 @@
 # java-tomcat-sample-docker
-Tomcat sample project for Docker
+Tomcat Java sample project for Docker
