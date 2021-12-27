@@ -3,7 +3,7 @@ pipeline {
      tools { 
       maven 'LocalMaven' 
       jdk 'LocalJDK' 
-	docker 'docker'
+
     }
     stages {
         stage('Build Application') {
@@ -22,7 +22,7 @@ pipeline {
 	stage('Create Tomcat Docker Image'){
 		
             steps {		
-                sh "/usr/bin/docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
