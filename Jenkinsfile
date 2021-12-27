@@ -3,9 +3,14 @@ pipeline {
      tools { 
       maven 'LocalMaven' 
       jdk 'LocalJDK' 
-
+	
     }
     stages {
+	stage('Initialize')
+    	{
+		def dockerHome = tool 'myDocker'		
+		env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
+    	}
         stage('Build Application') {
             steps {
 		echo "Building project"				
