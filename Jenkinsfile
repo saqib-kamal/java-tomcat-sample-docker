@@ -20,6 +20,7 @@ pipeline {
         }
 		stage('Create Tomcat Docker Image'){
             steps {
+		def dockerHome = tool 'myDocker'
                 sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
