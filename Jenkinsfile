@@ -24,7 +24,7 @@ pipeline {
 		
             steps {		
 		echo "Build docker image"
-                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "sudo docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
