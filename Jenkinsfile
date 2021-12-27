@@ -3,9 +3,8 @@ pipeline {
     stages {
         stage('Build Application') {
             steps {
-		echo "Building project"
-		echo "$MAVEN_HOME"
-                sh "mvn -f pom.xml clean package"
+		echo "Building project"		
+                sh "/usr/share/maven/bin -f pom.xml clean package"
 		echo "finished building projj"
             }
             post {
