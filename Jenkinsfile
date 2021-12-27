@@ -3,7 +3,7 @@ pipeline {
      tools { 
       maven 'LocalMaven' 
       jdk 'LocalJDK' 
-      dockerTool 'docker1'	
+      dockerTool 'myDocker'	
     }
     stages {	        
 	stage('Create Tomcat Docker Image'){
