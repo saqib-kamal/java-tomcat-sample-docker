@@ -3,6 +3,7 @@ pipeline {
      tools { 
       maven 'LocalMaven' 
       jdk 'LocalJDK' 
+	docker 'docker'
     }
     stages {
         stage('Build Application') {
