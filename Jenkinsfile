@@ -8,6 +8,8 @@ pipeline {
         stage('Build Application') {
             steps {
 		echo "Building project"
+	        sh "export MAVEN_HOME=/usr/share/maven"
+		sh "export PATH=$PATH:$MAVEN_HOME/bin"
                 sh "mvn -f pom.xml clean package"
 		echo "finished building projj"
             }
