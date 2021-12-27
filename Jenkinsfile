@@ -1,15 +1,10 @@
 pipeline {
     agent any
-     tools { 
-      maven 'LocalMaven' 
-      jdk 'LocalJDK' 
-    }
     stages {
         stage('Build Application') {
             steps {
 		echo "Building project"
-	        sh "export MAVEN_HOME=/usr/share/maven"
-		sh "export PATH=$PATH:$MAVEN_HOME/bin"
+		echo "$MAVEN_HOME"
                 sh "mvn -f pom.xml clean package"
 		echo "finished building projj"
             }
