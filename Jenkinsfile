@@ -19,10 +19,9 @@ pipeline {
             }
         }
 	stage('Create Tomcat Docker Image'){
-		def dockerHome = tool 'myDocker'
-        	env.PATH = "${dockerHome}/bin:${env.PATH}"
+		
             steps {		
-                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "/usr/bin/docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
