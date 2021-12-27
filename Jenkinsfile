@@ -23,8 +23,8 @@ pipeline {
 	stage('Create Tomcat Docker Image'){
 		
             steps {		
-		echo "Check docker version"
-                sh "docker --version"
+		echo "Build docker image"
+                sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
     }
