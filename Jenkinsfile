@@ -9,7 +9,7 @@ pipeline {
 	stage('Create Tomcat Docker Image'){
 		
             steps {		
-		echo "$USER"
+		echo "pwd"
 		sh "whoami"
                 sh "docker version"
             }
