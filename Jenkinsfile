@@ -2,7 +2,7 @@ pipeline {
     agent any
      tools { 
       
-      dockerTool 'myDocker'	
+      dockerTool 'docker1'	
     }
     stages {	        
 	stage('Create Tomcat Docker Image'){
